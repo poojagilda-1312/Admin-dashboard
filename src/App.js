@@ -10,12 +10,12 @@ import {
 } from './pages'
 import './App.css'
 const App = () => {
-  const activeMenu = false;
+  const activeMenu = true;
   return (
     <div>
       <BrowserRouter>
         <div className="flex relative dark:bg-main-dark-bg">
-          <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
+          <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}> 
             <TooltipComponent content="settings" position="top">
               <button
                 type="button"
@@ -55,7 +55,7 @@ const App = () => {
               <Route path="/kanban" element={<Kanban />} />
               <Route path="/editor" element={<Editor />} />
               <Route path="/calendar" element={<Calendar />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
+              {/* <Route path="/color-picker" element={<ColorPicker />} /> */}
 
               {/* charts  */}
               <Route path="/line" element={<Line />} />
@@ -63,7 +63,7 @@ const App = () => {
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
               <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<ColorMapping />} />
+              {/* <Route path="/color-mapping" element={<ColorMapping />} /> */}
               <Route path="/pyramid" element={<Pyramid />} />
               <Route path="/stacked" element={<Stacked />} />
             </Routes>
